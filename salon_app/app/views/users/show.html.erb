@@ -1,0 +1,42 @@
+<% provide(:title, @user.first_name+" "+@user.last_name) %>
+
+    <table>
+      	<tr>
+      		<td>
+      		<h1>	
+        	Welcome back!     
+    		</h1> <br />
+    		Account information:
+    		<table >
+    			<tr> 
+    				<td> Name: </td>
+    				<td>
+    					<%= @user.first_name+" "+ @user.last_name%>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td> Email: </td>
+    				<td> <%= @user.email %> </td>
+    			</tr>
+    			<tr>
+    				<td> Address: </td>
+    				<td> <%= @user.address1 %> </td>
+    			</tr>
+    			<tr>
+    				<td />
+    				<td> <%= @user.address2 %> </td>
+    			</tr>
+    			<tr> <td/><td/> </tr>
+    			<tr> <td/><td/> </tr>
+    			<tr>
+    				<td> Date of Birth </td>
+    				<td> <%= @user.dob %> </td>
+    			</tr>
+    			<tr>
+    				<td> <%= link_to 'Edit Information', edit_user_path(@user), class: "btn btn-small btn-primary"  %> </td>
+    				<td> <%= link_to 'Change Password', '#', class: "btn btn-small btn-primary"  %>
+    				</td>
+    			</tr>
+    		</table>
+    	</td>
+		</table>
