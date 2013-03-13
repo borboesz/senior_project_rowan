@@ -1,0 +1,26 @@
+<% provide(:title , 'Make an Appointment') %>
+
+<h1>Make an Appointment!</h1>
+
+<%= form_for(@appointment) do |f| %>
+<table>
+<tr>
+	<td>
+		Services<br/>
+		<table padding="10">
+		<% Service.all.each do |serv| %>
+			<tr>
+			<td><%= serv.name %> </td>
+			<td><%= serv.name %></td>
+			</tr>
+		<% end %>
+		</table>
+	</td>
+</tr>
+
+</table>
+<% end %>
+<% if current_user && current_user.employee %>
+	Make appointmet for another user!
+<% end %>
+
