@@ -27,6 +27,7 @@ class UsersController < ApplicationController
       flash[:alert] = "Welcome to the Sample App!"
       sign_in @user
       redirect_to @user
+      salon_mailer.welcome_email(@user).deliver
     else
       render 'new'
     end

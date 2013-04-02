@@ -55815,3 +55815,34 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-26 22:16:30 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130217190520)
+Migrating to AddIndexToUsersEmail (20130217191330)
+Migrating to AddPasswordDigestToUsers (20130217191625)
+Migrating to AddRememberTokenToUsers (20130217194025)
+Migrating to CreateAppointments (20130312175431)
+Migrating to CreateServices (20130312180215)
+Migrating to CreateServicesToAppointments (20130312180337)
+Migrating to CreateFeedbacks (20130327224117)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130217190520)
+Migrating to AddIndexToUsersEmail (20130217191330)
+Migrating to AddPasswordDigestToUsers (20130217191625)
+Migrating to AddRememberTokenToUsers (20130217194025)
+Migrating to CreateAppointments (20130312175431)
+Migrating to CreateServices (20130312180215)
+Migrating to CreateServicesToAppointments (20130312180337)
+Migrating to CreateFeedbacks (20130327224117)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "feedbacks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "appointmentID" integer, "text" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130327224117')[0m
+  [1m[35m (93.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m

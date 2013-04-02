@@ -4,10 +4,10 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Hello again, <%= @user.name %></h1>
+    <h1>Hello again, <%= @appointment.user.name %></h1>
     <p>
       Our records have indicated that you have attended an appointment with us on
-       <%= appointment.date %>.
+       <%= @appointment.date %>.
     </p>
     <p>
       Let us know how we did by visiting the following address: <br>
